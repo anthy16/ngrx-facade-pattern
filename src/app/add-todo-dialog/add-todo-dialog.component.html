@@ -1,0 +1,11 @@
+<div class="add-todo-dialog">
+  <h2>Add New Todo</h2>
+  <mat-form-field>
+    <input matInput placeholder="Todo title" type="text" [(ngModel)]="newTodoName" />
+  </mat-form-field>
+
+  <div class="add-todo-dialog__buttonrow">
+    <button mat-raised-button color="primary" (click)="addTodo()">Save</button>
+    <button mat-raised-button (click)="closeDialog()">Close</button>
+  </div>
+</div>

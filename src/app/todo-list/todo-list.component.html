@@ -1,0 +1,43 @@
+<mat-card class="todo-list">
+  <h1 class="todo-list__title">Todo List</h1>
+  <mat-list class="todo-list__list">
+    <mat-divider></mat-divider>
+    <ng-container *ngFor="let todo of todoList$ | async">
+      <mat-list-item>
+        <div class="todo-list__item">
+          <span>{{ todo.title }}</span>
+          <div>
+            <button
+              mat-icon-button
+              (click)="editTodo(todo)"
+              matTooltip="Edit todo"
+              color="primary"
+            >
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button
+              mat-icon-button
+              (click)="deleteTodo(todo)"
+              matTooltip="Delete todo"
+              color="warn"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </ng-container>
+  </mat-list>
+
+  <div class="todo-list__buttonrow">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="addNewTodo()"
+      matTooltip="Add a new Todo"
+    >
+      Add
+    </button>
+  </div>
+</mat-card>

@@ -1,0 +1,19 @@
+.todo-list {
+  min-width: 300px;
+
+  &__title {
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__list {
+    padding-bottom: 20px;
+  }
+
+  &__item {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

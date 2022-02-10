@@ -1,0 +1,16 @@
+<div class="edit-todo-dialog">
+  <h2>Editing Todo</h2>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Todo title"
+      type="text"
+      [(ngModel)]="newTodoName"
+    />
+  </mat-form-field>
+
+  <div class="edit-todo-dialog__buttonrow">
+    <button mat-raised-button color="primary" (click)="saveTodo()">Save</button>
+    <button mat-raised-button (click)="closeDialog()">Close</button>
+  </div>
+</div>

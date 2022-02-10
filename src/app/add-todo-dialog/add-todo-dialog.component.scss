@@ -1,0 +1,12 @@
+.add-todo-dialog {
+  display: flex;
+  flex-direction: column;
+
+  &__buttonrow {
+    padding-top: 20px;
+
+    button {
+      margin-right: 0.75rem;
+    }
+  }
+}
