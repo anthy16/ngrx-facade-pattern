@@ -1,27 +1,33 @@
 # NgrxFacadePattern
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+The point of this project is to test out NgRx features and more specifically play around with implementing the NgRx [facade pattern](https://thomasburlesonia.medium.com/ngrx-facades-better-state-management-82a04b9a1e39) by [Thomas Burleson](https://thomasburlesonia.medium.com/).
 
-## Development server
+The project is running Angular _v13_ with [Angular Material](https://material.angular.io/). The application itself is a simple todo list.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## What is the Facade Pattern?
 
-## Code scaffolding
+Facades in an Angular and NgRx context, is simply a way to create an abstraction between components and the store. Instead of components directly injecting the NgRx store, they inject a facade, which masks the NgRx artifacts. This simplifies the use of the store and removes the direct dependency to NgRx in every component that needs to access the store. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Creating a facade in Angular is also simple, as it is essentially just a service (an `@Injectable`).
 
-## Build
+## How to Run
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Install Dependencies**
+```sh
+$ npm install
+```
 
-## Running unit tests
+**Run Application**
+```sh
+$ npm run start
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Run Tests**
+```sh
+$ npm run test
+```
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Documentation
+- [NgRx + Facades: Better State Management by Thomas Burleson](https://thomasburlesonia.medium.com/ngrx-facades-better-state-management-82a04b9a1e39)
+- [NgRx Facade Pattern by Colum Ferry](https://www.thisdot.co/blog/ngrx-facade-pattern)
+- [NgRx Facades: Pros and Cons by Sam Julien](https://auth0.com/blog/ngrx-facades-pros-and-cons/)
